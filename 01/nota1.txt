@@ -1,0 +1,6 @@
+* Leerlo desde stdin
+
+
+    ./ac1801 < input.txt
+
+

@@ -1,0 +1,27 @@
+Nos encontramos ahora que la lista de cambios de frecuencia que reporta el
+dispositivo es continua, es decir, que está continuamente dando cambios de
+frecuencia.
+
+Sin embargo, en realidad es una lista de frecuencias que se repite de manera
+continua. Por ejemplo, si la lista de frecuencias es +1 -2 +3 +1, el
+dispositivo reporta continuamente:
+
+    +1 -2 +3 +1  +1 -2 +3 +1  +1 -2 +3 +1  +1 -2 +3 +1  +1 -2 +3 +1 ...
+
+Continuamente estaremos actualizando la frecuencia sumando o restando el cambio
+de frecuencia correspondiente.  Habremos encontrado la frecuencia final cuando
+tras sumar o restar un cambio de frecuencia obtengamos una frecuencia
+parcialmente final que ya se haya repetido en el pasado.
+
+Ejemplo para la secuencia [ +1 -2 +3 +1 ]:
+
+     0, +1 => +1            +1
+    +1, -2 => -1            -1 +1
+    -1, +3 => +2            -1 +1 +2
+    +3, +1 => +3            -1 +1 +2 +3
+                    y ahora empezamos otra vez
+    +3, +1 => +4            -1 +1 +2 +3 +4
+    +4, -2 => +2    +2 está en nuestra lista de frecuencias vistas
+                    por lo que +2 es el resultado final al problema.
+
+                    

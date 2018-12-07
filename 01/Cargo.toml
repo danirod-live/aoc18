@@ -1,0 +1,6 @@
+[package]
+name = "ac1801"
+version = "0.1.0"
+authors = ["Dani Rodríguez <dani@danirod.es>"]
+
+[dependencies]

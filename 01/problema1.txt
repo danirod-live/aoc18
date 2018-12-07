@@ -1,0 +1,23 @@
+Estamos intentando recalibrar el dispositivo obteniendo una frecuencia final.
+Este dispositivo nos reporta una serie de cambios en la frecuencia. Por
+ejemplo, +6 quiere decir que la frecuencia se incrementa en 6; y -3, que se
+decrementa en 3. La frecuencia final se corresponde con la suma o resta de esos
+cambios de frecuenia parciales.
+
+Por ejemplo,
+
+    Frecuencia inicial = 0
+    Cambios de frecuencia = [+1 -2 +3 +1]
+
+     0 , +1 => +1
+    +1 , -2 => -1
+    -1 , +3 => 2
+     2 , +1 => 3
+
+Otros ejemplos:
+
+    +1 +1 +1 => +3
+    +1 +1 -2 => 0
+    -1 -2 -3 => -6
+
+La frecuencia inicial es 0: ¿cuál es la frecuencia final?
